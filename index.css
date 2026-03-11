@@ -1,0 +1,1133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* تطبيق خط Rubik-Black على جميع العناصر */
+@font-face {
+  font-family: 'Rubik-Black';
+  src: url('/alfont_com_Rubik-Black (1).ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Rubik-Black', 'Cairo', sans-serif !important;
+}
+
+body {
+  direction: rtl;
+  background: #f8f9fa;
+  font-family: 'Rubik-Black', 'Cairo', sans-serif !important;
+}
+
+/* تطبيق الخط على جميع العناصر النصية */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li,
+td,
+th {
+  font-family: 'Rubik-Black', 'Cairo', sans-serif !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Rubik-Black', 'Cairo', sans-serif !important;
+}
+
+/* تحسينات للشاشات الصغيرة - RESPONSIVE IMPROVEMENTS */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* تحسينات للشاشات المتوسطة - TABLETS */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة - DESKTOP */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+/* تحسينات خاصة للشاشات الصغيرة جداً - SMALL MOBILE */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* تحسينات للشاشات العريضة - WIDE SCREENS */
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@layer components {
+  .gradient-header {
+    background: linear-gradient(135deg, #ff4444 0%, #ff6b35 50%, #ffa726 100%);
+  }
+
+  .category-card-new {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100 overflow-hidden;
+  }
+
+  .category-illustration {
+    @apply w-full h-32 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative;
+  }
+
+  .category-label {
+    @apply bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-2 text-sm font-bold;
+  }
+
+  .info-icon {
+    @apply absolute top-2 right-2 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold;
+  }
+
+  .btn-primary-new {
+    @apply bg-gradient-to-r from-red-500 to-orange-400 hover:from-red-600 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg;
+  }
+
+  .btn-secondary-new {
+    @apply bg-white hover:bg-gray-50 text-gray-800 font-semibold py-3 px-6 rounded-full border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg;
+  }
+
+  .team-input {
+    @apply w-full p-4 border-2 border-gray-200 rounded-full focus:ring-2 focus:ring-orange-500 focus:border-transparent text-center text-lg font-medium;
+  }
+
+  .score-counter {
+    @apply flex items-center gap-3;
+  }
+
+  .score-btn {
+    @apply w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-200 transform hover:scale-110;
+  }
+
+  .score-btn-minus {
+    @apply bg-red-500 hover:bg-red-600 text-white;
+  }
+
+  .score-btn-plus {
+    @apply bg-green-500 hover:bg-green-600 text-white;
+  }
+
+  /* Landing page specific styles */
+  .hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .feature-card {
+    @apply p-8 rounded-2xl border border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .pricing-card {
+    @apply p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-xl;
+  }
+
+  .pricing-card.popular {
+    @apply border-purple-500 bg-gradient-to-b from-purple-50 to-white transform scale-105;
+  }
+
+  .pricing-card:not(.popular) {
+    @apply border-gray-200 hover:border-purple-300;
+  }
+
+  /* Enhanced Modern Quiz Category Cards - RESPONSIVE */
+  .quiz-category-card {
+    @apply relative bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 transform hover:scale-105 hover:-translate-y-6;
+    min-height: 280px;
+    border: 3px solid rgba(249, 115, 22, 0.2);
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* RESPONSIVE ADJUSTMENTS FOR CATEGORY CARDS */
+  @media (max-width: 640px) {
+    .quiz-category-card {
+      min-height: 240px;
+      transform: translateY(20px);
+    }
+
+    .quiz-category-card:hover {
+      transform: scale(1.02) translateY(-8px);
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .quiz-category-card {
+      min-height: 260px;
+    }
+
+    .quiz-category-card:hover {
+      transform: scale(1.03) translateY(-12px);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .quiz-category-card {
+      min-height: 280px;
+    }
+  }
+
+  .quiz-category-card:hover {
+    border-color: rgba(249, 115, 22, 0.6);
+    box-shadow: 0 30px 60px rgba(249, 115, 22, 0.3),
+      0 0 40px rgba(249, 115, 22, 0.2);
+  }
+
+  .quiz-category-card.selected {
+    border-color: #10b981;
+    box-shadow: 0 30px 60px rgba(16, 185, 129, 0.4),
+      0 0 50px rgba(16, 185, 129, 0.3);
+    transform: scale(1.08) translateY(-16px);
+    background: linear-gradient(
+      135deg,
+      rgba(16, 185, 129, 0.1),
+      rgba(5, 150, 105, 0.15)
+    );
+  }
+
+  /* RESPONSIVE SELECTED STATE */
+  @media (max-width: 640px) {
+    .quiz-category-card.selected {
+      transform: scale(1.04) translateY(-8px);
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .quiz-category-card.selected {
+      transform: scale(1.06) translateY(-12px);
+    }
+  }
+
+  .category-image-container {
+    @apply absolute inset-0 overflow-hidden;
+  }
+
+  .category-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent;
+  }
+
+  .category-content {
+    @apply absolute bottom-0 left-0 right-0 p-8 z-10 text-center;
+  }
+
+  /* RESPONSIVE CATEGORY CONTENT */
+  @media (max-width: 640px) {
+    .category-content {
+      @apply p-4;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .category-content {
+      @apply p-6;
+    }
+  }
+
+  .category-name {
+    @apply text-2xl font-black text-white mb-3 filter drop-shadow-lg;
+  }
+
+  /* RESPONSIVE CATEGORY NAME */
+  @media (max-width: 640px) {
+    .category-name {
+      @apply text-lg mb-2;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .category-name {
+      @apply text-xl mb-2;
+    }
+  }
+
+  .category-desc {
+    @apply text-gray-200 text-base mb-4 font-medium leading-relaxed;
+  }
+
+  /* RESPONSIVE CATEGORY DESCRIPTION */
+  @media (max-width: 640px) {
+    .category-desc {
+      @apply text-sm mb-2;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .category-desc {
+      @apply text-sm mb-3;
+    }
+  }
+
+  .difficulty-stars {
+    @apply flex justify-center gap-1;
+  }
+
+  .card-glow {
+    @apply absolute inset-0 bg-gradient-to-r from-orange-400/20 to-red-400/20 rounded-3xl blur-xl opacity-0 transition-opacity duration-700 -z-10;
+  }
+
+  .quiz-category-card:hover .card-glow {
+    @apply opacity-100;
+  }
+
+  .shiny-effect {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%
+    );
+    transform: translateX(-100%);
+    animation: shine 3s infinite;
+  }
+
+  .quiz-category-card:hover .shiny-effect {
+    @apply opacity-100;
+  }
+
+  .gaming-start-button {
+    @apply relative bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 hover:from-orange-600 hover:via-red-600 hover:to-purple-700 text-white font-black py-6 px-16 rounded-3xl transition-all duration-500 transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-xl;
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* RESPONSIVE GAMING BUTTON */
+  @media (max-width: 640px) {
+    .gaming-start-button {
+      @apply py-4 px-8 text-lg;
+      box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .gaming-start-button {
+      @apply py-5 px-12 text-xl;
+      box-shadow: 0 12px 35px rgba(249, 115, 22, 0.45);
+    }
+  }
+
+  .gaming-start-button:hover {
+    box-shadow: 0 20px 60px rgba(249, 115, 22, 0.7),
+      0 0 40px rgba(249, 115, 22, 0.5);
+  }
+
+  /* RESPONSIVE HOVER EFFECTS */
+  @media (max-width: 640px) {
+    .gaming-start-button:hover {
+      box-shadow: 0 15px 45px rgba(249, 115, 22, 0.6),
+        0 0 30px rgba(249, 115, 22, 0.4);
+      transform: scale(1.05);
+    }
+  }
+
+  .button-glow {
+    @apply absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-purple-500 rounded-3xl blur-xl opacity-60 -z-10;
+    animation: pulse 2s infinite;
+  }
+
+  .team-setup-card {
+    @apply bg-black/20 backdrop-blur-sm border-2 rounded-3xl p-8 transition-all duration-500 hover:bg-black/30;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* RESPONSIVE TEAM SETUP CARD */
+  @media (max-width: 640px) {
+    .team-setup-card {
+      @apply p-4 rounded-2xl;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .team-setup-card {
+      @apply p-6 rounded-3xl;
+      box-shadow: 0 9px 28px rgba(0, 0, 0, 0.28);
+    }
+  }
+
+  .team-setup-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+  }
+
+  /* RESPONSIVE HOVER EFFECTS FOR TEAM CARDS */
+  @media (max-width: 640px) {
+    .team-setup-card:hover {
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+    }
+  }
+
+  /* Helper Tools Styles */
+  .helper-tool-button {
+    @apply relative flex items-center justify-center rounded-full transition-all duration-300 transform hover:scale-110;
+  }
+
+  .helper-tool-button.active {
+    @apply ring-2 ring-white;
+    animation: pulse-ring 1.5s infinite;
+  }
+
+  .helper-tool-button.disabled {
+    @apply opacity-50 cursor-not-allowed hover:scale-100;
+  }
+
+  .helper-tool-icon {
+    @apply transition-transform duration-300;
+  }
+
+  .helper-tool-button:hover .helper-tool-icon {
+    @apply scale-110;
+  }
+
+  .helper-tool-tooltip {
+    @apply absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 transition-opacity duration-300 whitespace-nowrap;
+    pointer-events: none;
+  }
+
+  .helper-tool-button:hover .helper-tool-tooltip {
+    @apply opacity-100;
+  }
+
+  .call-friend-timer {
+    @apply bg-blue-600 text-white font-bold rounded-full flex items-center justify-center;
+    animation: pulse 1s infinite;
+  }
+
+  .steal-button {
+    @apply bg-red-600 text-white;
+  }
+
+  .two-answers-button {
+    @apply bg-purple-600 text-white;
+  }
+
+  .call-friend-button {
+    @apply bg-blue-600 text-white;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Responsive design improvements - COMPREHENSIVE BREAKPOINTS */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quiz-category-card {
+    min-height: 200px;
+  }
+
+  .category-name {
+    @apply text-base;
+  }
+
+  .category-desc {
+    @apply text-xs;
+  }
+
+  .gaming-start-button {
+    @apply py-3 px-6 text-base;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .quiz-category-card {
+    min-height: 240px;
+  }
+
+  .category-name {
+    @apply text-xl;
+  }
+
+  .category-desc {
+    @apply text-sm;
+  }
+
+  .gaming-start-button {
+    @apply py-4 px-8 text-lg;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .quiz-category-card {
+    min-height: 260px;
+  }
+
+  .category-name {
+    @apply text-xl;
+  }
+
+  .category-desc {
+    @apply text-sm;
+  }
+
+  .gaming-start-button {
+    @apply py-5 px-10 text-lg;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .quiz-category-card {
+    min-height: 280px;
+  }
+
+  .category-name {
+    @apply text-2xl;
+  }
+
+  .category-desc {
+    @apply text-base;
+  }
+
+  .gaming-start-button {
+    @apply py-6 px-12 text-xl;
+  }
+}
+
+@media (min-width: 1441px) {
+  .hero-title {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .quiz-category-card {
+    min-height: 320px;
+  }
+
+  .category-name {
+    @apply text-3xl;
+  }
+
+  .category-desc {
+    @apply text-lg;
+  }
+
+  .gaming-start-button {
+    @apply py-7 px-16 text-2xl;
+  }
+}
+
+/* Custom scrollbar - RESPONSIVE */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Focus styles for accessibility - RESPONSIVE */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline-width: 1px;
+    outline-offset: 1px;
+  }
+}
+
+/* Loading animations - RESPONSIVE */
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .loading-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gradient text - RESPONSIVE */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button hover effects - RESPONSIVE */
+.btn-hover-lift {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .btn-hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Card hover effects - RESPONSIVE */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* COMPACT LAYOUT FOR SMALL HEIGHT SCREENS */
+@media screen and (max-height: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .quiz-category-card {
+    min-height: 200px;
+  }
+
+  .category-content {
+    @apply p-3;
+  }
+
+  .category-name {
+    @apply text-lg mb-1;
+  }
+
+  .category-desc {
+    @apply text-xs mb-2;
+  }
+}
+
+/* RESPONSIVE DESIGN FOR ALL ORIENTATIONS */
+@media screen and (max-width: 768px) {
+  .quiz-category-card {
+    min-height: 280px;
+  }
+
+  .gaming-start-button {
+    @apply w-full;
+  }
+
+  .team-setup-card {
+    @apply mb-4;
+  }
+}
+
+/* ULTRA-WIDE SCREEN SUPPORT */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .quiz-category-card {
+    min-height: 360px;
+  }
+
+  .category-name {
+    @apply text-4xl;
+  }
+
+  .category-desc {
+    @apply text-xl;
+  }
+}
+
+/* HIGH DPI SCREEN SUPPORT */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .quiz-category-card {
+    border-width: 2px;
+  }
+
+  .gaming-start-button {
+    border-width: 1px;
+  }
+}
+
+/* تأثيرات للزر المخفي */
+@keyframes pulse-admin {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.admin-button-appear {
+  animation: fadeIn 0.5s ease-out, pulse-admin 2s ease-in-out infinite;
+}
+
+/* Force landscape mode for GamePage only */
+@media screen and (max-width: 768px) {
+  .game-page-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
+/* Orientation prompt styles */
+.orientation-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.orientation-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+.orientation-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.orientation-message {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+.orientation-animation {
+  width: 80px;
+  height: 80px;
+  border: 4px solid white;
+  border-radius: 12px;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+.orientation-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  40% {
+    transform: translate(-50%, -50%) translateX(-10px);
+  }
+  60% {
+    transform: translate(-50%, -50%) translateX(10px);
+  }
+}
+
+/* Card-based layout styles */
+.category-card {
+  @apply bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-lg;
+}
+
+/* Game page specific styles */
+.game-container {
+  @apply flex flex-col h-screen overflow-hidden;
+}
+
+.game-header {
+  @apply bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-2 flex-shrink-0;
+}
+
+.game-content {
+  @apply flex-1 overflow-hidden p-2;
+}
+
+.game-footer {
+  @apply p-2 flex-shrink-0;
+}
+
+/* Team score cards */
+.team-score-card {
+  @apply bg-white rounded-xl shadow-md p-2;
+}
+
+/* Question card */
+.question-card {
+  @apply bg-white rounded-xl border-2 p-3 shadow-lg;
+}
+
+/* Answer card */
+.answer-card {
+  @apply bg-white rounded-xl border-2 border-green-500 p-3 shadow-lg;
+}
+
+/* Score selection card */
+.score-card {
+  @apply bg-white rounded-xl border-2 border-blue-500 p-3 shadow-lg;
+}
+
+/* Timer card */
+.timer-card {
+  @apply bg-gray-100 rounded-lg p-2 flex items-center justify-between;
+}
+
+/* Helper tools */
+.helper-tools {
+  @apply flex justify-center gap-1;
+}
+
+/* Game grid layout */
+.game-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3;
+}
+
+/* Team grid layout */
+.team-grid {
+  @apply grid grid-cols-2 gap-2;
+}

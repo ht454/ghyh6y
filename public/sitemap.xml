@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage - All Keywords Target Here -->
+  <url>
+    <loc>https://sherlooks.com/</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sherlooks.com/logo.png</image:loc>
+      <image:title>شير لوك - أفضل لعبة أسئلة عربية أونلاين</image:title>
+      <image:caption>لعبة أسئلة وأجوبة تفاعلية مع 36 سؤال في 6 فئات: أسئلة عامة، أسئلة بنات، أسئلة أنمي، أسئلة أغاني، فوازير رمضان، أسئلة ثقافية</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Game Page -->
+  <url>
+    <loc>https://sherlooks.com/game</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Game Board Page -->
+  <url>
+    <loc>https://sherlooks.com/game-board</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Authentication Pages -->
+  <url>
+    <loc>https://sherlooks.com/auth/login</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherlooks.com/auth/signup</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://sherlooks.com/privacy</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherlooks.com/terms</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://sherlooks.com/about</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Install Page -->
+  <url>
+    <loc>https://sherlooks.com/install</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset> 

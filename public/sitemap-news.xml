@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <url>
+    <loc>https://sherlooks.com/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>شير لوك</news:name>
+        <news:language>ar</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-19T00:00:00+03:00</news:publication_date>
+      <news:title>شير لوك - منصة الألعاب التفاعلية العربية الأولى</news:title>
+      <news:keywords>ألعاب تفاعلية, أسئلة عربية, ذكاء اصطناعي, ألعاب تعليمية</news:keywords>
+      <news:stock_tickers>GAME</news:stock_tickers>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://sherlooks.com/game</loc>
+    <news:news>
+      <news:publication>
+        <news:name>شير لوك</news:name>
+        <news:language>ar</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-19T00:00:00+03:00</news:publication_date>
+      <news:title>العب أسئلة ذكية مع شير لوك</news:title>
+      <news:keywords>لعبة أسئلة, ألعاب تفاعلية, أسئلة ذكية</news:keywords>
+      <news:stock_tickers>GAME</news:stock_tickers>
+    </news:news>
+  </url>
+  
+</urlset> 

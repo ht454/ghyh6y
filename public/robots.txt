@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Block admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+
+# Allow important pages
+Allow: /
+Allow: /game
+Allow: /auth/login
+Allow: /auth/signup
+Allow: /about
+Allow: /privacy
+Allow: /terms
+# Special bot rules for Homepage Focus
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://sherlooks.com/sitemap.xml
+Sitemap: https://sherlooks.com/sitemap-news.xml
+
+# Host
+Host: https://sherlooks.com 

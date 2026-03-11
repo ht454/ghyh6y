@@ -1,0 +1,159 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+         {
+       "@type": "WebSite",
+       "@id": "https://sherlooks.com/#website",
+       "url": "https://sherlooks.com",
+      "name": "شير لوك",
+      "description": "منصة الألعاب التفاعلية العربية الأولى. العب أسئلة ذكية مدعومة بالذكاء الاصطناعي مع الأصدقاء والعائلة.",
+                "publisher": {
+            "@id": "https://sherlooks.com/#organization"
+          },
+      "potentialAction": [
+                 {
+           "@type": "SearchAction",
+           "target": "https://sherlooks.com/search?q={search_term_string}",
+           "query-input": "required name=search_term_string"
+         }
+      ],
+      "inLanguage": "ar",
+      "isAccessibleForFree": true
+    },
+         {
+       "@type": "Organization",
+       "@id": "https://sherlooks.com/#organization",
+       "name": "شير لوك",
+       "url": "https://sherlooks.com",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://sherlooks.com/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://twitter.com/sherlook",
+        "https://instagram.com/sherlook",
+        "https://tiktok.com/@sherlook"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "Arabic"
+      }
+    },
+         {
+       "@type": "WebPage",
+       "@id": "https://sherlooks.com/#webpage",
+       "url": "https://sherlooks.com",
+      "name": "شير لوك - منصة الألعاب التفاعلية العربية",
+      "description": "منصة الألعاب التفاعلية العربية الأولى. العب أسئلة ذكية مدعومة بالذكاء الاصطناعي مع الأصدقاء والعائلة. مجاني تماماً وآمن 100%.",
+                "isPartOf": {
+            "@id": "https://sherlooks.com/#website"
+          },
+          "about": {
+            "@id": "https://sherlooks.com/#organization"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://sherlooks.com/#primaryImage"
+          },
+      "datePublished": "2024-01-01T00:00:00+03:00",
+      "dateModified": "2024-12-19T00:00:00+03:00",
+                "breadcrumb": {
+            "@id": "https://sherlooks.com/#breadcrumb"
+          },
+      "inLanguage": "ar",
+      "potentialAction": [
+                 {
+           "@type": "ReadAction",
+           "target": ["https://sherlooks.com"]
+         }
+      ]
+    },
+         {
+       "@type": "ImageObject",
+       "@id": "https://sherlooks.com/#primaryImage",
+       "url": "https://sherlooks.com/logo.png",
+      "width": 512,
+      "height": 512,
+      "caption": "شير لوك - منصة الألعاب التفاعلية"
+    },
+         {
+       "@type": "BreadcrumbList",
+       "@id": "https://sherlooks.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://sherlooks.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "لعبة الأسئلة",
+          "item": "https://sherlooks.com/game"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "فئات الأسئلة",
+          "item": "https://sherlooks.com/#categories"
+        }
+      ]
+    },
+         {
+       "@type": "SoftwareApplication",
+       "name": "شير لوك",
+       "applicationCategory": "GameApplication",
+       "operatingSystem": "Web Browser",
+       "url": "https://sherlooks.com",
+      "description": "منصة الألعاب التفاعلية العربية الأولى. العب أسئلة ذكية مدعومة بالذكاء الاصطناعي مع الأصدقاء والعائلة.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SAR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "شير لوك"
+      },
+             "screenshot": "https://sherlooks.com/logo.png",
+      "softwareVersion": "1.0.0",
+      "inLanguage": "ar",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "Game",
+      "name": "شير لوك",
+      "description": "لعبة أسئلة تفاعلية مدعومة بالذكاء الاصطناعي",
+      "genre": ["Educational", "Puzzle", "Family"],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SAR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "شير لوك"
+      }
+    }
+  ]
+} 
